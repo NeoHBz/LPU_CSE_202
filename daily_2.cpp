@@ -81,7 +81,7 @@ string getMonth(int month) {
 
 void q3() {
     int month;
-    cout << "Enter a number: ";
+    cout << "Enter a month number: ";
     cin >> month;
 
     string monthName = getMonth(month);
