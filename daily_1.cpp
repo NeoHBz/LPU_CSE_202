@@ -2,13 +2,13 @@
 
 using namespace std;
 
-void concat() {
+string concat() {
     string str1, str2;
     cout << "Enter the first string: ";
     cin >> str1;
     cout << "Enter the second string: ";
     cin >> str2;
-    cout << "Concatenated string: " << str1 << str2 << endl;
+    return str1 + str2;
 }
 
 float gradeAvg() {
@@ -23,17 +23,19 @@ float gradeAvg() {
     return sumOfGrades / 5;
 }
 
-void square() {
-    int num;
-    cout << "Enter a number: ";
-    cin >> num;
-    cout << "The square of " << num << " is: " << num * num << endl;
+int square(int num) {
+    return num * num;
 }
 
 int main() {
-    concat();
+    string combined = concat();
+    cout << "Concatenated string: " << combined << endl;
     float avg = gradeAvg();
     cout << "The average grade is: " << avg << endl;
-    square();
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+    int sq = square(num);
+    cout << "The square of " << num << " is: " << num * num << endl;
     return 0;
 }
